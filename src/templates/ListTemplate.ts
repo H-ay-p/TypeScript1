@@ -8,6 +8,9 @@ interface DOMList {
 
 export default class ListTemplate implements DOMList {
   ul: HTMLUListElement;
+
+  static instance: ListTemplate = new ListTemplate();
+
   private constructor() {
     this.ul = document.getElementById("listItems") as HTMLUListElement;
   }
